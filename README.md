@@ -1,3 +1,4 @@
 # LinearTransformWebPage
-# Project to help visualize Linear Transformations
-# https://myjumperbroke23.github.io/LinearTransformWebPage/
+Project to help visualize Linear Transformations
+
+Take a look: https://myjumperbroke23.github.io/LinearTransformWebPage/
