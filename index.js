@@ -66,8 +66,8 @@ var j_selected = false
 let i_vector = new Vector(i_color, (c_x + line_spacing), c_y, c_x, c_y)
 let j_vector = new Vector(j_color, c_x, (c_y - line_spacing), c_x, c_y)
 
-var pointsOrig = [[1,1], [2,2], [3,3]]
-var pointsDraw = [[1,1], [2,2], [3,3]]
+var pointsOrig = [[1,1]]
+var pointsDraw = [[1,1]]
 var transfMatrix = [[1.00,0.00],[0.00,1.00]]
 
 var drawPoints_selected = false
