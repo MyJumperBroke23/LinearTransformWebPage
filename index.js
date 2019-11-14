@@ -390,6 +390,7 @@ function inside(point, vs) {
     return inside;
 };
 
+// Draws one side of matrix/vector
 function matrixSide(x, y, diff, color) {
 	ctx.fillStyle = color
 	ctx.strokeStyle = color
