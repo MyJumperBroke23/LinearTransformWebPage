@@ -192,6 +192,62 @@ function drawMatrix() {
 	ctx.fillStyle = j_color
 	ctx.fillText(transfMatrix[0][1].toFixed(2), 250, 140)
 	ctx.fillText(transfMatrix[1][1].toFixed(2), 250, 190)
+	ctx.fillStyle = "black"
+	ctx.strokeStyle = "black"
+	ctx.font = "30px Arial Itallic"
+	ctx.fillText("x", 70, 305)
+	ctx.fillText("y", 70, 345)
+	ctx.fillText("X", 150, 325)
+	ctx.beginPath()
+	ctx.moveTo(65, 355)
+	ctx.lineTo(65, 275)
+	ctx.lineTo(69, 275)
+	ctx.moveTo(90, 355)
+	ctx.lineTo(90, 275)
+	ctx.lineTo(86, 275)
+	ctx.moveTo(65, 355)
+	ctx.lineTo(69, 355)
+	ctx.moveTo(90, 355)
+	ctx.lineTo(86, 355)
+	ctx.stroke()
+	ctx.closePath()
+	ctx.fillText("=", 110, 325)
+	ctx.fillStyle = i_color
+	ctx.strokeStyle = i_color
+	ctx.beginPath()
+	ctx.moveTo(180, 355)
+	ctx.lineTo(180, 275)
+	ctx.lineTo(184, 275)
+	ctx.moveTo(245, 355)
+	ctx.lineTo(245, 275)
+	ctx.lineTo(241, 275)
+	ctx.moveTo(245, 355)
+	ctx.lineTo(241, 355)
+	ctx.moveTo(180, 355)
+	ctx.lineTo(184, 355)
+	ctx.stroke()
+	ctx.fillText(transfMatrix[0][0].toFixed(2), 185, 305)
+	ctx.fillText(transfMatrix[1][0].toFixed(2), 185, 345)
+	ctx.fillStyle = "black"
+	ctx.fillText("+", 255, 325)
+	ctx.fillText("Y", 285, 325)
+	ctx.fillStyle = j_color
+	ctx.strokeStyle = j_color
+	ctx.beginPath()
+	ctx.moveTo(320, 355)
+	ctx.lineTo(320, 275)
+	ctx.lineTo(324, 275)
+	ctx.moveTo(385, 355)
+	ctx.lineTo(385, 275)
+	ctx.lineTo(381, 275)
+	ctx.moveTo(385, 355)
+	ctx.lineTo(381, 355)
+	ctx.moveTo(320, 355)
+	ctx.lineTo(324, 355)
+	ctx.stroke()
+	ctx.fillText(transfMatrix[0][1].toFixed(2), 327, 305)
+	ctx.fillText(transfMatrix[1][1].toFixed(2), 327, 345)
+
 }
 
 function redrawAll() {
