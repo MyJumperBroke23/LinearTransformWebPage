@@ -185,47 +185,19 @@ function drawNewAxes() {
 }
 
 function drawMatrix() {
-	ctx.font = "35px Arial"
-	ctx.fillStyle = i_color
-	ctx.fillText(transfMatrix[0][0].toFixed(2), 160, 140)
-	ctx.fillText(transfMatrix[1][0].toFixed(2), 160, 190)
-	ctx.fillStyle = j_color
-	ctx.fillText(transfMatrix[0][1].toFixed(2), 250, 140)
-	ctx.fillText(transfMatrix[1][1].toFixed(2), 250, 190)
 	ctx.fillStyle = "black"
 	ctx.strokeStyle = "black"
 	ctx.font = "30px Arial Itallic"
 	ctx.fillText("x", 70, 305)
 	ctx.fillText("y", 70, 345)
 	ctx.fillText("X", 150, 325)
-	ctx.beginPath()
-	ctx.moveTo(65, 355)
-	ctx.lineTo(65, 275)
-	ctx.lineTo(69, 275)
-	ctx.moveTo(90, 355)
-	ctx.lineTo(90, 275)
-	ctx.lineTo(86, 275)
-	ctx.moveTo(65, 355)
-	ctx.lineTo(69, 355)
-	ctx.moveTo(90, 355)
-	ctx.lineTo(86, 355)
-	ctx.stroke()
-	ctx.closePath()
+	matrixSide(65, 355, 4, "black")
+	matrixSide(90, 355, -4, "black")
 	ctx.fillText("=", 110, 325)
 	ctx.fillStyle = i_color
 	ctx.strokeStyle = i_color
-	ctx.beginPath()
-	ctx.moveTo(180, 355)
-	ctx.lineTo(180, 275)
-	ctx.lineTo(184, 275)
-	ctx.moveTo(245, 355)
-	ctx.lineTo(245, 275)
-	ctx.lineTo(241, 275)
-	ctx.moveTo(245, 355)
-	ctx.lineTo(241, 355)
-	ctx.moveTo(180, 355)
-	ctx.lineTo(184, 355)
-	ctx.stroke()
+	matrixSide(180, 355, 4, i_color)
+	matrixSide(250, 355, -4, i_color)
 	ctx.fillText(transfMatrix[0][0].toFixed(2), 185, 305)
 	ctx.fillText(transfMatrix[1][0].toFixed(2), 185, 345)
 	ctx.fillStyle = "black"
@@ -233,20 +205,35 @@ function drawMatrix() {
 	ctx.fillText("Y", 285, 325)
 	ctx.fillStyle = j_color
 	ctx.strokeStyle = j_color
-	ctx.beginPath()
-	ctx.moveTo(320, 355)
-	ctx.lineTo(320, 275)
-	ctx.lineTo(324, 275)
-	ctx.moveTo(385, 355)
-	ctx.lineTo(385, 275)
-	ctx.lineTo(381, 275)
-	ctx.moveTo(385, 355)
-	ctx.lineTo(381, 355)
-	ctx.moveTo(320, 355)
-	ctx.lineTo(324, 355)
-	ctx.stroke()
+	matrixSide(320, 355, 4, j_color)
+	matrixSide(390, 355, -4, j_color)
 	ctx.fillText(transfMatrix[0][1].toFixed(2), 327, 305)
 	ctx.fillText(transfMatrix[1][1].toFixed(2), 327, 345)
+	ctx.fillStyle = "black"
+	ctx.strokeStyle = "black"
+	ctx.font = "30px Arial Itallic"
+	ctx.fillText("x", 70, 150)
+	ctx.fillText("y", 70, 190)
+	matrixSide(65, 200, 4, "black")
+	matrixSide(90, 200, -4, "black")
+	ctx.fillText("=", 110, 170)
+	ctx.font = "30px Arial Itallic"
+	ctx.fillStyle = i_color
+	ctx.fillText(transfMatrix[0][0].toFixed(2), 160, 150)
+	ctx.fillText(transfMatrix[1][0].toFixed(2), 160, 190)
+	ctx.fillStyle = j_color
+	ctx.fillText(transfMatrix[0][1].toFixed(2), 240, 150)
+	ctx.fillText(transfMatrix[1][1].toFixed(2), 240, 190)
+	ctx.fillStyle = "black"
+	ctx.strokeStyle = "black"
+	matrixSide(155, 200, 4, "black")
+	matrixSide(300, 200, -4, "black")
+	ctx.fillText("=", 110, 170)
+	matrixSide(310, 200, 4, "black")
+	ctx.fillText("X", 320, 150)
+	ctx.fillText("Y", 320, 190)
+	matrixSide(350, 200, -4, "black")
+	
 
 }
 
@@ -403,6 +390,18 @@ function inside(point, vs) {
     return inside;
 };
 
+function matrixSide(x, y, diff, color) {
+	ctx.fillStyle = color
+	ctx.strokeStyle = color
+	ctx.beginPath()
+	ctx.moveTo(x, y)
+	ctx.lineTo(x, y-75)
+	ctx.lineTo(x+diff, y-75)
+	ctx.moveTo(x,y)
+	ctx.lineTo(x+diff, y)
+	ctx.stroke()
+	ctx.closePath()
+}
 
 
 
