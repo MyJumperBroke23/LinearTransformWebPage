@@ -222,8 +222,8 @@ function drawMatrix() {
 	ctx.fillText(transfMatrix[0][0].toFixed(2), 160, 150)
 	ctx.fillText(transfMatrix[1][0].toFixed(2), 160, 190)
 	ctx.fillStyle = j_color
-	ctx.fillText(transfMatrix[0][1].toFixed(2), 240, 150)
-	ctx.fillText(transfMatrix[1][1].toFixed(2), 240, 190)
+	ctx.fillText(transfMatrix[0][1].toFixed(2), 235, 150)
+	ctx.fillText(transfMatrix[1][1].toFixed(2), 235, 190)
 	ctx.fillStyle = "black"
 	ctx.strokeStyle = "black"
 	matrixSide(155, 200, 4, "black")
