@@ -97,6 +97,27 @@ function drawPoints() {
 		ctx.lineTo(c_x + (pointsDraw[pointsDraw.length - 1][0] * line_spacing), c_y - (pointsDraw[pointsDraw.length - 1][1] * line_spacing))
 		ctx.stroke()
 	}
+	ctx.fillStyle = "purple"
+	ctx.strokeStyle = "purple"
+	for (var point = 0; point < pointsOrig.length; point++){
+		ctx.beginPath()
+		ctx.arc(c_x + (pointsOrig[point][0] * line_spacing), c_y - (pointsOrig[point][1] * line_spacing), 5, 2 * Math.PI, false)
+		ctx.fill()
+	}
+	if (showLines_selected) {
+		console.log("show lines")
+		for (var point = 0; point < pointsDraw.length - 1; point++) {
+			ctx.beginPath()
+			ctx.strokeStyle = "purple"
+			ctx.lineWidth = 3
+			ctx.moveTo(c_x + (pointsOrig[point][0] * line_spacing), c_y - (pointsOrig[point][1] * line_spacing))
+			ctx.lineTo(c_x + (pointsOrig[point+1][0] * line_spacing), c_y - (pointsOrig[point+1][1] * line_spacing))
+			ctx.stroke()
+		}
+		ctx.moveTo(c_x + (pointsOrig[0][0] * line_spacing), c_y - (pointsOrig[0][1] * line_spacing))
+		ctx.lineTo(c_x + (pointsOrig[pointsDraw.length - 1][0] * line_spacing), c_y - (pointsOrig[pointsDraw.length - 1][1] * line_spacing))
+		ctx.stroke()
+	}
 }
 
 // Draws checkboxes that allow user to toggle drawing points, and showing lines
