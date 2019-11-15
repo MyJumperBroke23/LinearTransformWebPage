@@ -233,6 +233,7 @@ function drawMatrix() {
 	ctx.fillText("X", 320, 150)
 	ctx.fillText("Y", 320, 190)
 	matrixSide(350, 200, -4, "black")
+	ctx.fillText("Drag The Vectors", 180, 500)
 	
 
 }
